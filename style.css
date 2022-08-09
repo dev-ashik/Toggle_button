@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.label {
+  width: 50px;
+  height: 25px;
+  background-color: rgb(235, 235, 235);
+  background-color: #282f59;
+  display: flex;
+  text-align: center;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.ball {
+  width: 15px;
+  height: 15px;
+  background-color: #282f59;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  margin: 5px;
+  transition: transform 0.5s;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox:checked ~ .label {
+  background-color: whitesmoke;
+}
+
+.checkbox:checked ~ .label .ball {
+  background-color: #282f59;
+  transform: translateX(25px);
+}
+
+body.dark {
+  background-color: #282f59;
+}
+
+body.dark .ball {
+  background-color: #282f59;
+}
